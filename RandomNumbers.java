@@ -3,21 +3,33 @@ import java.util.*;
 public class RandomNumbers{
     public static void main(String[] args) {
         
-   Scanner input = new Scanner(System.in);
-   System.out.println("Enter the limit of the number you want");
-   int num = input.nextInt();
+  int array[] = new int [100];
 
-   Random ran = new Random();
+  for(int i = 0, x = 1; i < array.length; i++){
+            array[i] = x;
+            x++;
+  }
+
+
+for(int i = 0; i < array.length; i++){
+
+    boolean var = true;
+     if(array[i] == 2){
+         System.out.print(array[i] + " ");
+     }else{
+         for(int y = 2; y <= array[i]; y++){
+               if(array[i] % y != 0 ){
+                         var = false;
+               }
+         }
+                if(var){
+                    System.out.print(array[i] + " ");
+                }     
+     }
   
-    int array[] = new int[num];
+        var = true;
 
-        for(int i = 0; i <= array.length-1; i++){
-                   int limit =  ran.nextInt(10) + 1;
-        }
-
-        for(int i = 0; i < array.length; i++){
-            System.out.print(array[i] + " ");
-        }
+}
 
 
 
