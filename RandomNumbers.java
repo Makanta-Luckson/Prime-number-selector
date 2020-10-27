@@ -5,34 +5,16 @@ public class RandomNumbers{
         
   int array[] = new int [100];
 
-  for(int i = 0, x = 1; i < array.length; i++){
-            array[i] = x;
-            x++;
+  Random ran = new Random();
+// a loop stroing the numbers into the array
+  for(int i = 0; i < array.length;  i++){
+      array[i] = ran.nextInt(992) + 10;
   }
-
-
-for(int i = 0; i < array.length; i++){
-
-    boolean var = true;
-     if(array[i] == 2){
-         System.out.print(array[i] + " ");
-     }else{
-         for(int y = 2; y <= array[i]; y++){
-               if(array[i] % y != 0 ){
-                         var = false;
-               }
-         }
-                if(var){
-                    System.out.print(array[i] + " ");
-                }     
-     }
-  
-        var = true;
-
-}
-
-
-
+                         // a loop printing out the generated numbers
+                for(int y = 0; y < array.length; y++){
+                    System.out.print(array[y] + " ");
+                }
+                System.out.println();
 
 
     }
